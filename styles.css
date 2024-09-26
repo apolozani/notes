@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.semester-btn {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 1 1 auto;
+}
+
+.semester-btn:hover {
+    background-color: #777;
+}
+
+.semester-btn.active {
+    background-color: #0a146d; /* Active semester button color */
+    border: 1px solid rgb(14, 11, 224)
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+#add-section {
+    background-color: #0a146d;
+    
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid rgb(14, 11, 224);
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+
+#subjects-container {
+    margin-top: 20px;
+}
+
+.subject {
+    background-color: #333;
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.subject-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subject-heading h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.files-container {
+    margin-top: 10px;
+}
+
+.add-file-btn {
+    background-color: #0e21c5;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.file-item a {
+    text-decoration: none;
+    color: #007bff;
+    word-break: break-all;
+}
+
+.file-item a:hover {
+    text-decoration: underline;
+}
+
+.note-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.note-textarea {
+    width: auto;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.save-note-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subject-heading h2 {
+        font-size: 1rem;
+    }
+
+    .semester-btn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .file-item a {
+        font-size: 0.9rem;
+    }
+
+    #add-section {
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        gap: 5px;
+    }
+
+    .semester-btn {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    #add-section {
+        width: 100%;
+    }
+
+    .subject {
+        padding: 5px;
+    }
+
+    .file-item a {
+        font-size: 0.8rem;
+    }
+
+    .remove-btn {
+        padding: 3px 8px;
+    }
+
+    .note-textarea {
+        height: 50px;
+    }
+}
